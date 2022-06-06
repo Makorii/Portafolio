@@ -1,0 +1,368 @@
+body{
+    margin: 0;
+    height: 100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* OPCIONES */
+#nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 96, 181, 0.198);
+}
+.nav-ul {
+    width: 25%;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    color: rgb(204, 249, 243);
+}
+
+/* SECTION 1 sobre mi */
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://i.imgur.com/l9khy4e.png);
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
+.welcome-title{
+    font-family: 'Prompt', sans-serif;
+    font-size: 70px;
+    margin-bottom: 0;
+}
+
+.welcome-p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 30px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* SECTION 2 proyectos */
+#projects {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    background-image: url(https://i.imgur.com/K6lGy4p.png);
+    background-position: center;
+    color: rgb(9, 235, 235);
+    height: 110vh;
+    border-width: 10px 0 0 0;
+    border-style: solid;
+    border-color: rgb(0, 56, 124);
+}
+
+#title-project {
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+}
+
+#contenedor-proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 0 auto 90px auto;
+}
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(9, 235, 235);
+    font-family: 'Arima Madurai', cursive;
+    font-size: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(1, 126, 180);
+}
+.img-proyectos {
+    height: 200px;
+    width: 300px;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: rgb(1, 126, 180);
+}
+
+.div-proyectos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link1, .div-icon {
+    text-decoration: none;
+    color: aquamarine;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* SECTION 3 contactos */
+#contact{
+    background-image: url(https://i.imgur.com/GT8zaAB.png);
+    background-position: center;
+    color: rgb(9, 235, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    border-width: 10px 0;
+    border-style: solid;
+    border-color: rgb(0, 56, 124);
+}
+
+#titulo-contact {
+    font-family: 'Prompt', sans-serif;
+    font-size: 40px;
+}
+#div-contactos {
+    margin-bottom: 50px;
+}
+.contactos{
+    margin: 20px;
+    text-decoration: none;
+    color: rgb(9, 235, 235);
+    font-family: 'Arima Madurai', cursive;
+    font-size: 25px;
+    transition-property: font-size;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.contactos:hover{
+    font-size: 30px;
+}
+
+.last-link{
+    text-decoration: none;
+    color: aquamarine;
+    margin-top: 150px;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: rgba(2, 2, 103, 0.843);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 8vh;
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+/* Mobile: 320 a 480*/
+@media (min-width: 320px) and (max-width: 480px){
+    /* OPCIONES */
+    #nav-bar {
+        justify-content: center;
+        width: 100%;
+    }
+    .nav-ul {
+        width: 100%;
+        justify-content: center;
+        margin: 7px;
+    }
+    .nav-link {
+        margin: 15px;
+        font-size: 20px;
+    }
+    .link1, .div-icon {
+        font-size: 2rem;
+    }
+
+    /* SECTION 1 sobre mi */
+    #welcome-section {
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    .welcome-title {
+        font-size: 30px;
+    }
+    .welcome-p {
+        font-size: 20px;
+    }
+
+    /* SECTION 2 proyectos */
+    #projects {
+        grid-template-rows: 1fr 8fr auto;
+        height: 180vh;
+    }
+    #title-project {
+        font-size: 15px;
+        margin: 0;
+        width: 100%;
+        height: 50%;
+    }
+    #contenedor-proyectos{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        width: 100%;
+        margin: 10px;
+        height: auto;
+    }
+    .div-proyectos{
+        height: auto;
+    }
+    .project-tile{
+        font-size: 15px;
+    }
+    .img-proyectos{
+        height: 150px;
+        width: 205px;
+    }
+
+    /* SECTION 3 contactos */
+    #titulo-contact {
+        font-size: 15px;
+        text-align: center;
+    }
+    #div-contactos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .contactos {
+        font-size: 15px;
+    }
+    /* FOOTER */
+    .footer{
+        font-size: 10px;
+        height: auto;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+/* Ipads, tablets: 481 a 768 */
+@media (min-width: 481px) and (max-width: 768px){
+        /* OPCIONES */
+        #nav-bar {
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-ul {
+            width: 100%;
+            justify-content: center;
+            margin: 7px;
+        }
+        .nav-link {
+            margin: 15px;
+            font-size: 25px;
+        }
+        .link1, .div-icon {
+            font-size: 2.5rem;
+        }
+        /* SECTION 1 sobre mi */
+        #welcome-section {
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            width: 100%;
+        }
+        .welcome-title {
+            font-size: 45px;
+        }
+        .welcome-p {
+            font-size: 25px;
+        }
+    
+        /* SECTION 2 proyectos */
+        #projects {
+            grid-template-rows: 1fr 6fr 1.5fr;
+        }
+        #title-project {
+            font-size: 20px;
+            margin: 0;
+            width: 100%;
+            height: 50%;
+        }
+        #contenedor-proyectos{
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            width: 100%;
+            height: 80%;
+            margin: 0;
+        }
+        .div-proyectos{
+            height: auto;
+            margin: 10px;
+        }
+        .project-tile{
+            font-size: 14px;
+            text-align: center;
+            width: auto;
+        }
+        
+        .img-proyectos{
+            height: 150px;
+            width: 200px;
+        }
+    
+        /* SECTION 3 contactos */
+        #titulo-contact {
+            font-size: 25px;
+            text-align: center;
+        }
+        #div-contactos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .contactos {
+            font-size: 20px;
+        }
+        /* FOOTER */
+        .footer{
+            font-size: 15px;
+            height: auto;
+            justify-content: center;
+            padding: 0;
+        }
+}
+
+/* Small screens, laptops: 769 a 1024 */
+@media (min-width: 769px) and (max-width: 1024px){
+    .nav-ul{
+        width: 40%;
+        margin-right: 20px;
+    }
+    #welcome-section {
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+
+    }
+}
+
+/* Desktops, large screens: 1025 a 1200 */
+@media (min-width: 1025px) and (max-width: 1200px){
+    .nav-ul{
+        width: 35%;
+        margin-right: 20px;
+    }
+}
